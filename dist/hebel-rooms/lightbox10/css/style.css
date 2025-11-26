@@ -109,3 +109,73 @@
   display: none;
 }
 
+/* 追記 */
+.sp .contents {
+  padding-bottom: 50px;
+}
+
+.wrap_footer {
+  padding-bottom: 50px;
+  margin-top: 80px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-content-bottom .copylight {
+  font-size: 0.9rem;
+}
+
+body .footer .centering-list li {
+  float: left !important;
+}
+
+.close_button {
+  display: none;
+}
+
+@media only screen and (max-width: 739px) {
+  .sp .close_button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: box;
+    display: flexbox;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+  }
+}
+.close {
+  display: box;
+  display: flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 0.06em;
+  background-color: transparent;
+  border: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
+
+.close svg {
+  width: 5px;
+  height: 10px;
+  margin-right: 10px;
+}
+
