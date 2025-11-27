@@ -155,13 +155,12 @@ default_hack
 }
 
 /* 追記 */
-.sp .contents {
-  padding-bottom: 50px;
+.page.contents.sp_useimgh1 {
+  padding-bottom: 0;
 }
 
 .wrap_footer {
   padding-bottom: 50px;
-  margin-top: 80px;
   border-top: 1px solid #ccc;
 }
 
