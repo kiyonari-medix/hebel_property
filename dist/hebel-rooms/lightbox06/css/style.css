@@ -1,1 +1,181 @@
-#header .headerWrap{margin-top:1.875%}#header .logo{margin-top:.3125%;width:53.125%}.contents.zeh-m{background-color:#fff}@media only screen and (max-width:739px){.contents.zeh-m{padding-bottom:0}.sp .contents.zeh-m{padding-bottom:50px}}.zeh-m-wrap{margin:0 auto;max-width:980px;padding-left:20px;padding-right:20px}@media only screen and (max-width:739px){.zeh-m-wrap{max-width:none;padding-left:0;padding-right:0;width:89.3333333333%}}.zeh-m-heading{color:#00772a;font-size:24px;font-size:2.4rem;font-weight:700;letter-spacing:.06em;line-height:1;text-align:center}@media only screen and (max-width:739px){.zeh-m-heading{font-size:21px;font-size:2.1rem}}.zeh-m-heading-under-shoulder{border:2px solid #00772a;-webkit-box-sizing:border-box;box-sizing:border-box;display:table;font-size:16px;font-size:1.6rem;font-weight:700;letter-spacing:0;line-height:32px;margin:8px auto 0;padding:0 8px}@media only screen and (max-width:739px){.zeh-m-heading-under-shoulder{border-right-width:1px;font-size:12px;font-size:1.2rem;line-height:25px;padding:0 8px}}.zeh-m-body{margin-top:50px}@media only screen and (max-width:739px){.zeh-m-body{margin-top:30px}}.zeh-m-section-heading{color:#00772a;font-size:18px;font-size:1.8rem;font-weight:700;text-align:center}@media only screen and (max-width:739px){.zeh-m-section-heading{line-height:1.6}}.zeh-m-body-text-wrap{margin:25px auto 0;max-width:680px}@media only screen and (max-width:739px){.zeh-m-body-text-wrap{margin-top:20px}}.zeh-m-body-text{color:#333;font-size:14px;font-size:1.4rem;letter-spacing:.06em;line-height:2}@media only screen and (max-width:739px){.zeh-m-body-text{font-size:12px;font-size:1.2rem}}.zeh-m-body-note-wrap{margin:20px auto 0;max-width:680px}@media only screen and (max-width:739px){.zeh-m-body-note-wrap{margin-top:15px}}.zeh-m-body-note{color:#666;font-size:12px;font-size:1.2rem;line-height:1.8}@media only screen and (max-width:739px){.zeh-m-body-note{font-size:10px;font-size:1rem}}.zeh-m-section-body{margin-top:50px}@media only screen and (max-width:739px){.zeh-m-section-body{margin-top:40px}}.zeh-m-zu{background-color:#f3fafb;border-radius:10px;-webkit-box-sizing:border-box;box-sizing:border-box;padding:45px 30px 50px;text-align:center;width:100%}.zeh-m-zu img{max-width:100%}@media only screen and (max-width:739px){.zeh-m-zu{padding:60px 0}}.wrap_footer{border-top:1px solid #ccc;margin-top:80px}.footer-content-bottom .copylight{font-size:.9rem}.close_button{display:none}@media only screen and (max-width:739px){.close_button{-webkit-box-align:center;-ms-flex-align:center;-webkit-box-pack:center;-ms-flex-pack:center;align-items:center;background-color:#333;bottom:0;height:50px;justify-content:center;left:0;position:fixed;width:100%}}.close{-webkit-box-align:center;-ms-flex-align:center;-webkit-box-pack:center;-ms-flex-pack:center;align-items:center;background-color:transparent;border:none;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;font-size:1.2rem;justify-content:center;letter-spacing:.06em}.close svg{height:10px;margin-right:10px;width:5px}.sp .close_button{display:-webkit-box;display:-ms-flexbox;display:flex}
+:root {
+  --color-base-text: #411f0d;
+  --color-base-text-light: #664e42;
+  --color-base-bg: #fff;
+  --color-orange: #e99f59;
+  --color-orange-light: #fff3e4;
+  --font-bold: 700;
+  --font-regular: 400
+}
+
+.l-container {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 210px
+}
+
+#header {
+  display: none
+}
+
+#header .headerWrap{
+  margin: 3.6vw 0;
+}
+
+#header .logo {
+  width: 48%;
+}
+
+#header .logo a {
+  display: inline-block
+}
+
+.l-main {
+  display: block;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background: var(--color-base-bg);
+  color: var(--color-base-text);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0
+}
+
+.l-section:not(:last-child) {
+  margin-bottom: 40px
+}
+
+.firstview-main__visual {
+  overflow: hidden;
+  border-radius: 20px
+}
+
+.firstview-main__visual h1 {
+  display: block
+}
+
+.firstview-main__visual picture,
+.firstview-main__visual img {
+  display: block;
+  width: 100%
+}
+
+@media (max-width: 1519px) {
+  .l-container {
+    max-width: 1060px;
+    padding-inline: 40px
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .l-container {
+    padding-inline: 6.1538vw
+  }
+
+  #header {
+    display: block
+  }
+
+  .l-main {
+    padding-top: 0;
+    padding-bottom: 10.2564vw;
+    font-size: 4.102vw
+  }
+
+  .l-section:not(:last-child) {
+    margin-bottom: 20.5128vw
+  }
+
+  .l-section[data-section=firstview] {
+    margin-bottom: 10.2564vw
+  }
+
+  .l-container.--large {
+    padding-inline: 3.077vw
+  }
+
+  .firstview-main__visual {
+    border-radius: 5.1282vw
+  }
+}
+
+.l-main .section {
+  width: 100%;
+}
+
+.close_button {
+  display: none;
+}
+
+/* 追記 */
+.sp .contents {
+  padding-bottom: 50px;
+}
+
+.wrap_footer {
+  padding-bottom: 50px;
+  margin-top: 80px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-content-bottom .copylight {
+  font-size: 0.9rem;
+}
+
+body .footer .centering-list li {
+  float: left !important;
+}
+
+.close_button {
+  display: none;
+}
+
+@media only screen and (max-width: 739px) {
+  .sp .close_button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: box;
+    display: flexbox;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+  }
+}
+.close {
+  display: box;
+  display: flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 0.06em;
+  background-color: transparent;
+  border: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
+
+.close svg {
+  width: 5px;
+  height: 10px;
+  margin-right: 10px;
+}
+
