@@ -1,7 +1,8 @@
 :root {
-  --color-base-text: #411f0d;
-  --color-base-text-light: #664e42;
+  --color-base-text: #333;
+  --color-base-text-light: #666;
   --color-base-bg: #fff;
+  --color-green: #2EB6aa;
   --color-orange: #e99f59;
   --color-orange-light: #fff3e4;
   --font-bold: 700;
@@ -9,9 +10,14 @@
 }
 
 .l-container {
-  max-width: 1400px;
+  max-width: 1000px;
   margin-inline: auto;
-  padding-inline: 210px
+  padding-inline: 210px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.l-contents {
+  background: linear-gradient(180deg, #FFF 9.78%, #E5F5F4 28.34%);
 }
 
 #header {
@@ -64,8 +70,120 @@
 
 @media (max-width: 1519px) {
   .l-container {
-    max-width: 1060px;
+    max-width: 980px;
     padding-inline: 40px
+  }
+}
+
+/* about */
+
+.p-about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.p-about__head {
+  .p-about__heading {
+    .title {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+      color: var(--color-base-text);
+
+      span.is-green {
+        font-size: 2.8rem;
+        color: var(--color-green);
+      }
+
+      span.is-underline {
+        font-size: 2.8rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      span.is-underline::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+        background-color: #FFF34F;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.p-about__content {
+  .p-about__note {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .p-about__note li {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-base-text-light);
+  }
+}
+
+/* reason */
+
+.p-reason {
+  .l-container {
+    background-color: var(--color-base-bg);
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.p-reason__heading {
+  width: fit-content;
+  margin: 0 auto;
+
+  .title {
+    width: fit-content;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    color: var(--color-base-text);
+    position: relative;
+
+    span.is-green {
+      font-size: 2.8rem;
+      color: var(--color-green);
+    }
+  }
+
+  .title::before,
+  .title::after {
+    content: '';
+    display: block;
+    width: 21px;
+    height: 34px;
+    position: absolute;
+    bottom: 6px;
+    background: url('../img/reason_header_deco.svg') center bottom no-repeat;
+    background-size: contain;
+  }
+
+  .title::before {
+    left: -30px;
+  }
+
+  .title::after {
+    right: -30px;
+    transform: scaleX(-1);
   }
 }
 
@@ -178,4 +296,3 @@ body .footer .centering-list li {
   height: 10px;
   margin-right: 10px;
 }
-
