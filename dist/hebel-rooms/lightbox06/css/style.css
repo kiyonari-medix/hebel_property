@@ -419,12 +419,15 @@
 
 @media (max-width: 767px) {
   .p-reason {
-    padding-inline: 6.1538vw;
-    padding-bottom: 25.641vw;
+    padding-bottom: 10.26vw;
 
     .l-container {
       padding: 10.26vw 6.666vw;
     }
+  }
+
+  .p-reason__inner {
+    padding: 10.26vw 6.666vw;
   }
 
   .p-reason__heading {
