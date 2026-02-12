@@ -50,6 +50,7 @@
     <script type="text/javascript" src="/file.jsp?id=356289" defer></script><!-- /hebel-rooms/common_v2/js/util.js -->
     <link rel="stylesheet" href="/file.jsp?id=888837" type="text/css"><!-- /hebel-rooms/lightbox06/css/style.css -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://www.afr-web.co.jp/hebel-rooms/feature/zeh/assets/css/magnific-popup/magnific-popup.css">
   
 
   <script>
@@ -105,6 +106,11 @@
             </picture>
           </h1>
         </div>
+        <div class="firstview-main__movie">
+          <a href="https://ovp-player.smartstream.ne.jp/eproweb/output/player/a0695f0be886438c9e9fbf6712e5fba9/index.html?mp=bcb9c27feac34e43a0e1f4aca25d0725&amp;ts=1574397240" class="js-modal-movie">
+            <img src="/hebel-rooms/lightbox06/img/movie_poster.jpg" width="960" height="540" loading="lazy" alt="へーベルメゾンZEH 入居者様の声動画">
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -137,36 +143,38 @@
     <!-- reason -->
     <section class="p-reason">
       <div class="l-container">
-        <div class="p-reason__heading">
-          <h2 class="title">
-            ZEH対応マンションが<br class="for_sp">注目される<span class="is-green">3つ</span>の理由
-          </h2>
-        </div>
-        <div class="p-reason__content">
-          <ul class="p-reason__list">
-            <li class="p-reason__item">
-              <div class="p-reason__item__fig">
-                <img src="/hebel-rooms/lightbox06/img/reason_fig01.svg" width="440" height="410" loading="eager" decoding="async" alt="MERIT 1 高い断熱性で、快適な室温を維持">
-              </div>
-            </li>
-            <li class="p-reason__item">
-              <div class="p-reason__item__fig">
-                <img src="/hebel-rooms/lightbox06/img/reason_fig02.svg" width="440" height="394" loading="eager" decoding="async" alt="MERIT 2 省エネ設備搭載で光熱費を抑えられる">
-              </div>
-            </li>
-            <li class="p-reason__item">
-              <div class="p-reason__item__fig">
-                <img src="/hebel-rooms/lightbox06/img/reason_fig03.svg" width="440" height="410" loading="eager" decoding="async" alt="MERIT 3 太陽光発電で停電時も安心">
-              </div>
-            </li>
-          </ul>
-          <div class="p-reason__summary">
-            <span>つまり......</span>
-            <p class="p-reason__summary__text">ZEH-M（ゼッチ・マンション）は<br>環境に配慮し、経済性、快適性でも<br class="for_sp">メリットがある集合住宅。</p>
-            <ul class="p-reason__summary__note">
-              <li>※1　太陽光発電の電力供給住戸なら日中は発電電力も使えて、さらに光熱費が抑えられます。</li>
-              <li>※2　太陽光発電供給住戸のみとなります。天候によって発電量は変動します。</li>
+        <div class="p-reason__inner">
+          <div class="p-reason__heading">
+            <h2 class="title">
+              ZEH対応マンションが<br class="for_sp">注目される<span class="is-green">3つ</span>の理由
+            </h2>
+          </div>
+          <div class="p-reason__content">
+            <ul class="p-reason__list">
+              <li class="p-reason__item">
+                <div class="p-reason__item__fig">
+                  <img src="/hebel-rooms/lightbox06/img/reason_fig01.svg" width="440" height="410" loading="eager" decoding="async" alt="MERIT 1 高い断熱性で、快適な室温を維持">
+                </div>
+              </li>
+              <li class="p-reason__item">
+                <div class="p-reason__item__fig">
+                  <img src="/hebel-rooms/lightbox06/img/reason_fig02.svg" width="440" height="394" loading="eager" decoding="async" alt="MERIT 2 省エネ設備搭載で光熱費を抑えられる">
+                </div>
+              </li>
+              <li class="p-reason__item">
+                <div class="p-reason__item__fig">
+                  <img src="/hebel-rooms/lightbox06/img/reason_fig03.svg" width="440" height="410" loading="eager" decoding="async" alt="MERIT 3 太陽光発電で停電時も安心">
+                </div>
+              </li>
             </ul>
+            <div class="p-reason__summary">
+              <span>つまり......</span>
+              <p class="p-reason__summary__text">ZEH-M（ゼッチ・マンション）は<br>環境に配慮し、経済性、快適性でも<br class="for_sp">メリットがある集合住宅。</p>
+              <ul class="p-reason__summary__note">
+                <li>※1　太陽光発電の電力供給住戸なら日中は発電電力も使えて、さらに光熱費が抑えられます。</li>
+                <li>※2　太陽光発電供給住戸のみとなります。天候によって発電量は変動します。</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -217,6 +225,40 @@
 
   <!-- ここから削除しない -->
   <script type="text/javascript" src="/hebel-rooms/common_v2/lib/jquery.min.js"></script>
+<script src="https://www.afr-web.co.jp/hebel-rooms/feature/zeh/assets/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script>
+(function(){
+  function isPc() { return window.matchMedia('(min-width: 768px)').matches; }
+  document.addEventListener('DOMContentLoaded', function() {
+    var $ = window.jQuery;
+    if (!$) return;
+    var $link = $('.js-modal-movie');
+    if (!$link.length) return;
+    $link.on('click', function(e) {
+      e.preventDefault();
+      var href = $(this).attr('href');
+      if (isPc()) {
+        var $wrap = $(this).closest('.firstview-main__movie');
+        if ($wrap.find('iframe').length) return;
+        $(this).hide();
+        var autoplayUrl = href + (href.indexOf('?') !== -1 ? '&' : '?') + 'autoplay=1&autostart=1';
+        $wrap.append('<div class="firstview-main__movie-iframe-wrap"><iframe src="' + autoplayUrl + '" width="960" height="540" frameborder="0" allow="autoplay; fullscreen" class="firstview-main__movie-iframe"></iframe></div>');
+      } else {
+        if ($.magnificPopup) {
+          $.magnificPopup.open({
+            items: { src: href },
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 200,
+            preloader: false,
+            fixedContentPos: true
+          });
+        }
+      }
+    });
+  });
+})();
+</script>
  <!-- @@@TEMPLATE END@@@ -->
 <!-- ↓↓ [ footer3 ] ↓↓ -->
 <!-- ↑↑ [ footer3 ] ↑↑ -->

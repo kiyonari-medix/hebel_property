@@ -402,6 +402,42 @@ if(pageName === '/features/hebelmaison/' || pageName === '/features/hebelmaison/
 <script type="text/javascript" src="/hebel-rooms/common_v2/js/features/hebelmaison/page.js" ></script>
 <script type="text/javascript" src="//www.afr-web.co.jp/file.jsp?id=606777"></script><%
 }
+if(pageName === 'lightbox06'){%>
+<script src="https://www.afr-web.co.jp/hebel-rooms/feature/zeh/assets/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script>
+(function(){
+  function isPc() { return window.matchMedia('(min-width: 768px)').matches; }
+  document.addEventListener('DOMContentLoaded', function() {
+    var $ = window.jQuery;
+    if (!$) return;
+    var $link = $('.js-modal-movie');
+    if (!$link.length) return;
+    $link.on('click', function(e) {
+      e.preventDefault();
+      var href = $(this).attr('href');
+      if (isPc()) {
+        var $wrap = $(this).closest('.firstview-main__movie');
+        if ($wrap.find('iframe').length) return;
+        $(this).hide();
+        var autoplayUrl = href + (href.indexOf('?') !== -1 ? '&' : '?') + 'autoplay=1&autostart=1';
+        $wrap.append('<div class="firstview-main__movie-iframe-wrap"><iframe src="' + autoplayUrl + '" width="960" height="540" frameborder="0" allow="autoplay; fullscreen" class="firstview-main__movie-iframe"></iframe></div>');
+      } else {
+        if ($.magnificPopup) {
+          $.magnificPopup.open({
+            items: { src: href },
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 200,
+            preloader: false,
+            fixedContentPos: true
+          });
+        }
+      }
+    });
+  });
+})();
+</script><%
+}
 if(pageName !== 'lightbox08'){%>
  <!-- @@@TEMPLATE END@@@ --><% 
 }%>
